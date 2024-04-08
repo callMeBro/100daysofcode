@@ -20,7 +20,7 @@ def binary_search(l, target, low=None, high=None):
         # Search in the right half
         return binary_search(l, target, midpoint + 1, high)
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
     l = [1, 3, 5, 10, 12]
     target = 10
     print(binary_search(l, target))                 # Output: 3
