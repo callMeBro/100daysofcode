@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1 class ="center">Completed projects</h1>
+    <style>
+        /* CSS to center the list */
+        .center {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .center ul {
+            list-style: none; /* Remove bullets */
+            padding: 0; /* Remove default padding */
+        }
+        .center ul li {
+            margin-bottom: 10px; /* Optional: Add some spacing between list items */
+        }
+    </style>
+    <div class="center">
+        <ul>
+            <li><a href="https://example.com/link1">Link 1</a></li>
+            <li><a href="https://example.com/link2">Link 2</a></li>
+            <li><a href="https://example.com/link3">Link 3</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </div>
+{% endblock %}

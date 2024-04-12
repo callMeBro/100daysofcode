@@ -1,0 +1,17 @@
+    /* CSS to center the list */
+    .center {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .center ul {
+        list-style: none;
+        /* Remove bullets */
+        padding: 0;
+        /* Remove default padding */
+    }
+
+    .center ul li {
+        margin-bottom: 10px;
+        /* Optional: Add some spacing between list items */
+    }
