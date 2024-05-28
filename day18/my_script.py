@@ -85,7 +85,7 @@ print(z)
 ##########################################################################
 
 # Get the Student column as a series Object
-x = df1['Student']
+x = df['Student']
 print(x)
 
 #check the type of x

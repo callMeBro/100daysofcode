@@ -106,31 +106,33 @@ arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
 print(arr[1:8:2])
 # print(even)
 
+# Define the array `c`
+c = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
 # Create the index list
 select = [0, 2, 3, 4]
-select
+print(select)
 
 # Use List to select elements
 d = c[select]
-d
+print(d)
 
 # Assign the specified elements to new value
 c[select] = 100000
-c
+print(c)
 
 # Create a numpy array
 a = np.array([0, 1, 2, 3, 4])
-a
+print(a)
 
 # Get the size of numpy array
-a.size
+print(a.size)
 
 # Get the number of dimensions of numpy array
-a.ndim
+print(a.ndim)
 
 # Get the shape/size of numpy array
-a.shape
+print(a.shape)
 
 
 ##############################################################################
@@ -142,7 +144,8 @@ a = np.array([1, -1, 1, -1])
 
 # Get the mean of numpy array
 mean = a.mean()
-mean
+print(mean)
+
 
 # Get the standard deviation of numpy array
 standard_deviation=a.std()
@@ -150,37 +153,39 @@ standard_deviation
 
 # Create a numpy array
 b = np.array([-1, 2, 3, 4, 5])
-b
+print(b)
 
 
 # Get the biggest value in the numpy array
 max_b = b.max()
-max_b
-
+print(max_b)
 
 # Get the smallest value in the numpy array
 min_b = b.min()
-min_b
+print(min_b)
 
 ##############################################################################
 # Numpy Array Operations
 u = np.array([1, 0])
-u
+print(u)
 
 v = np.array([0, 1])
-v
+print(v)
 
 ##############################################################################
 # Numpy Array Addition
 z = np.add(u, v)
-z
+print(z)
+
 
 
 a = np.array([10, 20, 30])
-a
+print(a)
+
 
 b = np.array([5, 10, 15])
-b
+print(b)
+
 
 c = np.subtract(a, b)
 print(c)
@@ -190,29 +195,31 @@ print(c)
 
 # Create a numpy array
 x = np.array([1, 2])
-x
+print(x)
+
 
 # Create a numpy array
 y = np.array([2, 1])
-y
+print(y)
+
 
 # Numpy Array Multiplication-- can multiply every element in the array by 2
 z = np.multiply(x, y)
-z
+print(z)
 
 
 ####################################################################################
 # Consider the vector numpy array a:
 z = np.multiply(x, y)
-z
+print(z)
 
 # Consider the vector numpy array b:
 b = np.array([2, 10, 5])
-b
+print(b)
 
 # We can divide the two arrays and assign it to c:
 c = np.divide(a, b)
-c
+print(c)
 
 
 
@@ -251,20 +258,16 @@ np.dot(arr1, arr2)
 # Adding Constant to a Numpy Array
 
 # Create a constant to numpy array
-
 u = np.array([1, 2, 3, -1]) 
-u
+print(u)
 
 # Add the constant to array
-
-u + 1
-
+print(u + 1)
 ####################################################################################
 
 # Mathematical Functions
 # The value of pi
-np.pi
-
+print(np.pi)
 
 # Create the numpy array in radians
 x = np.array([0, np.pi/2 , np.pi])
@@ -274,8 +277,7 @@ x = np.array([0, np.pi/2 , np.pi])
 
 # Calculate the sin of each elements
 y = np.sin(x)
-y
-
+print(y)
 
 #######################################################################################
 
@@ -303,6 +305,7 @@ x = np.linspace(0, 2*np.pi, num=100)
 # Calculate the sine of x list
 y = np.sin(x)
 
+import matplotlib.pyplot as plt
 # Plot the result
 plt.plot(x, y)
 
@@ -313,7 +316,7 @@ plt.plot(x, y)
 # Write your code below and press Shift+Enter to execute
 a = np.array([1, 2, 3, 4, 5])
 b = np.array([1, 0, 1, 0, 1])
-a * b
+print(a * b)
 
 
 
