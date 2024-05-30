@@ -1,0 +1,1 @@
+This is my second attempt at the 100 Days of coding challenge. My first few days are documents on threads. Mainly worked on building 'studybud' djangowebapp from a youtube tutorial  

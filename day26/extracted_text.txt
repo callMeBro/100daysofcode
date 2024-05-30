@@ -1,0 +1,21 @@
+STRAVA
+Afternoon Run
+Run
+3.6 mi
+Pace
+8:23 /mi
+Time
+31m 1s
+STRAVA
+Afternoon
+Run
+Run
+3.6
+mi
+Pace
+8:23
+/
+mi
+Time
+31m
+1s
