@@ -65,7 +65,7 @@ definitions = [
     "XML (Extensible Markup Language) is a text-based format for storing and structuring data using tags, often used for data interchange and configuration files."
 ]
 
-# Create a DataFrame
+#Create a DataFrame
 data = {
     "Term": terms,
     "Definition": definitions
@@ -73,8 +73,8 @@ data = {
 
 df = pd.DataFrame(data)
 
-# Display the DataFrame
+#Display the DataFrame
 print(df)
 
-# Optionally, save the DataFrame to a CSV file
+# ave the DataFrame to a CSV file
 df.to_csv('terms_and_definitions.csv', index=False)
