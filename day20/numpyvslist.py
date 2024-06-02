@@ -151,5 +151,3 @@ print(full_like_vec)
 vec_sum = vec + full_like_vec
 print("\nSum of original vector and vector filled with 3:")
 print(vec_sum)
-
-
