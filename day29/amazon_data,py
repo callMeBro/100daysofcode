@@ -1,0 +1,65 @@
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+from time import sleep
+
+# Initialize an empty DataFrame with the required columns
+amazon_data = pd.DataFrame(columns=["Date", "Open", "High", "Low", "Close", "Adj Close", "Volume"])
+
+url = 'https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0220EN-SkillsNetwork/labs/project/netflix_data_webpage.html'
+
+# Function to fetch data with retry mechanism
+def fetch_data(url, retries=5, backoff_factor=0.3):
+    for i in range(retries):
+        try:
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()  # Raise HTTPError for bad responses (4xx and 5xx)
+            return response.text
+        except requests.exceptions.RequestException as e:
+            print(f"Attempt {i + 1} failed: {e}")
+            sleep(backoff_factor * (2 ** i))  # Exponential backoff
+    raise Exception(f"Failed to fetch data from {url} after {retries} retries")
+
+# Fetch data
+data = fetch_data(url)
+
+# Parse HTML content using BeautifulSoup
+soup = BeautifulSoup(data, 'html.parser')
+
+# Extract data and append to DataFrame
+for row in soup.find("tbody").find_all("tr"):
+    col = row.find_all("td")
+    date = col[0].text.strip()
+    Open = col[1].text.strip()
+    high = col[2].text.strip()
+    low = col[3].text.strip()
+    close = col[4].text.strip()
+    adj_close = col[5].text.strip()
+    volume = col[6].text.strip()
+
+    # Create a new DataFrame for the new row of data
+    new_row = pd.DataFrame([{
+        "Date": date,
+        "Open": Open,
+        "High": high,
+        "Low": low,
+        "Close": close,
+        "Adj Close": adj_close,
+        "Volume": volume
+    }])
+
+    # Append the new data using pd.concat
+    amazon_data = pd.concat([amazon_data, new_row], ignore_index=True)
+
+# Now amazon_data contains all the appended rows
+print(amazon_data)
+
+
+#Print out the first five rows of the amazon_data data frame you created.
+print(amazon_data.head())
+
+#What are the names of the columns in the data frame?
+print(amazon_data.columns.tolist())
+
+#What is the Open of the last row of the amazon_data data frame?
+print(amazon_data.iloc[-1]['Open'])

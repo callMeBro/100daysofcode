@@ -1,0 +1,16 @@
+{
+  "company": "Advanced Micro Devices",
+  "founded": 1969,
+  "country": "United States",
+  "industry": "Semiconductors",
+  "products": [
+    "Microprocessors",
+    "Graphics processing units",
+    "Motherboard chipsets"
+  ],
+  "revenue": {
+    "2019": 6731000000,
+    "2020": 9440000000,
+    "2021": 14500000000
+  }
+}
