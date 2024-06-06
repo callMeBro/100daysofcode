@@ -1,0 +1,34 @@
+CHATGPT EXAMPLES 
+-- Example 1: Insert a new instructor record with id 10 for Maria Gonzalez who lives in Toronto, CA
+INSERT INTO Instructor(ins_id, lastname, firstname, city, country)
+VALUES(10, 'Gonzalez', 'Maria', 'Toronto', 'CA');
+
+-- Retrieve all records from the Instructor table
+SELECT * FROM Instructor;
+
+-- Example 2: Insert a new instructor record with id 11 for John Doe who lives in New York, US
+INSERT INTO Instructor(ins_id, lastname, firstname, city, country)
+VALUES(11, 'Doe', 'John', 'New York', 'US');
+
+-- Example 3: Insert two new instructor records into the Instructor table
+-- First record with id 12 for Jane Smith who lives in London, GB
+-- Second record with id 13 for Raj Patel who lives in Mumbai, IN
+INSERT INTO Instructor(ins_id, lastname, firstname, city, country)
+VALUES(12, 'Smith', 'Jane', 'London', 'GB'), 
+      (13, 'Patel', 'Raj', 'Mumbai', 'IN');
+
+-- Retrieve all records from the Instructor table
+SELECT * FROM Instructor;
+
+-- Example 4: Update the city of the instructor record to Los Angeles whose id is 2
+UPDATE Instructor 
+SET city = 'Los Angeles' 
+WHERE ins_id = 2;
+
+-- Example 5: Update the city and country for Maria Gonzalez with id 10 to Montreal and CA respectively
+UPDATE Instructor 
+SET city = 'Montreal', country = 'CA' 
+WHERE ins_id = 10;
+
+-- Retrieve all records from the Instructor table
+SELECT * FROM Instructor;
