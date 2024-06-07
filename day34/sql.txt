@@ -1,0 +1,34 @@
+COURSERA NOTES
+
+
+ALTER TABLE table_name
+ADD column_name data_type;
+
+A variation of the syntax for adding column is:
+ALTER TABLE table_name
+ADD COLUMN column_name data_type;
+
+By default, all the entries are initially assigned the value NULL. You can then use UPDATE statements to add the necessary column values.
+
+
+For example, to add a telephone_number column to the author table in the library database, the statement will be written as:
+
+ALTER TABLE author 
+ADD telephone_number BIGINT;
+
+Modify column data type
+ALTER TABLE table_name
+MODIFY column_name data_type;
+
+
+Sometimes, the data presented may be in a different format than required. In such a case, we need to modify the data_type of the column. For example, using a numeric data type for telephone_number means you cannot include parentheses, plus signs, or dashes as part of the number. For such entries, the appropriate choice of data_type is CHAR.
+
+To modify the data type, the statement will be written as:
+
+ALTER TABLE author
+MODIFY telephone_number CHAR(20);...
+
+## FINISHED UP MODULE 2 ##
+
+
+
